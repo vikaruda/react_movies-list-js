@@ -1,10 +1,10 @@
 import './MovieList.scss';
 import { MovieCard } from '../MovieCard/MovieCard';
 
-export const MovieList = ({ moviesFromServer }) => (
+export const MovieList = ({ movies }) => (
   <div className="movies">
-    {moviesFromServer.map(movies => (
-      <MovieCard movies={movies} key={movies.imdbId} />
+    {movies.map(movie => (
+      <MovieCard movie={movie} key={movie.imdbId} />
     ))}
   </div>
 );
